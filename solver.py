@@ -80,9 +80,6 @@ class Nine:
 
     @property
     def missing(self):
-        for s in self._squares:
-            print(s)
-            print(s.is_solved)
         known = set([s.answer for s in self._squares if s.is_solved])
         return set(NUMBER_RANGE).difference(known)
 
